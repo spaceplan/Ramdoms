@@ -18,9 +18,13 @@ public class Join {
             Entity entity=event.getEntity();
             if(entity instanceof PlayerEntity)
             {
+                String message="Hello world";
+                StringTextComponent text=new StringTextComponent(message);
+                entity.sendMessage(text,entity.getUniqueID());
                 PlayerEntity playerEntity= (PlayerEntity) entity;
                 playerEntity.sendMessage(new StringTextComponent("菜鸟<"+playerEntity.getName().getString()+">上线了~"),playerEntity.getUniqueID());
             }
+
         }
     }
 }
