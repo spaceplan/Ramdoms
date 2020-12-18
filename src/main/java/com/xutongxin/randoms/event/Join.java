@@ -5,19 +5,22 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
-
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class Join {
+    
+    
     @SubscribeEvent
     public static void onPlayerJoin(EntityJoinWorldEvent event)
     {
-        Entity entity=event.getEntity();
-        if(entity instanceof PlayerEntity)
-        {
-            String message="Hello world";
-            StringTextComponent text=new StringTextComponent(message);
-            ((PlayerEntity) entity).sendStatusMessage(text,false);
-
+        if (!event.getWorld().isRemote){
+            Entity entity=event.getEntity();
+            if(entity instanceof PlayerEntity)
+            {
+                PlayerEntity playerEntity= (PlayerEntity) entity;
+                playerEntity.sendMessage(new StringTextComponent("菜鸟<"+playerEntity.getName().getString()+">上线了~"),playerEntity.getUniqueID());
+            }
         }
     }
 }
