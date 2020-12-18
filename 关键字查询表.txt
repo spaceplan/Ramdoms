@@ -1,0 +1,8 @@
+static 静态
+final 不变量
+void 代表的意思是什么也不返回
+this与super（没有self的）https://www.cnblogs.com/hasse/p/5023392.html
+构造函数 就是init默认类被使用时加载 https://www.yiibai.com/java/constructor.html
+抽象类 abstract https://www.runoob.com/java/java-abstraction.html
+    要使用的话就extend继承抽象类并且在该类的构造函数写super
+    然后覆写其中的方法
