@@ -4,6 +4,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -26,5 +27,13 @@ public class Join {
             }
 
         }
+    }
+    @SubscribeEvent
+    public static void onPlayerDeath(LivingDeathEvent event)
+    {
+        Entity entity=event.getEntity();
+        String message=event.getSource().damageType+"See you";
+        StringTextComponent text=new StringTextComponent(message);
+        entity.sendMessage(text,entity.getUniqueID());
     }
 }

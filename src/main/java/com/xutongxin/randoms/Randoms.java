@@ -19,7 +19,9 @@ public class Randoms {
         Random random = new Random();
         String[] strs = {"cu", "iron", "cd", "d", "e"};
         for (String str : strs) {
-            GameRegister.RegistryItem(new Test1Item(str, random.nextInt(10)));
+            //GameRegister.RegistryItem(new Test1Item(str, random.nextInt(10)));
         }
+        //GameRegister.RegistryBlock(new TestBlock());
     }
 }
+
