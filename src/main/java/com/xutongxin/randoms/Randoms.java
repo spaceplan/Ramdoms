@@ -16,12 +16,6 @@ public class Randoms {
     public Randoms() {
         Tree tree = new Tree(this.getClass().getPackage().getName());
         tree.run();
-        Random random = new Random();
-        String[] strs = {"cu", "iron", "cd", "d", "e"};
-        for (String str : strs) {
-            //GameRegister.RegistryItem(new Test1Item(str, random.nextInt(10)));
-        }
-        //GameRegister.RegistryBlock(new TestBlock());
     }
 }
 
