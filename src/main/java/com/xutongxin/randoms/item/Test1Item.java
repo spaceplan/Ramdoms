@@ -9,7 +9,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 
-public class Test1Item extends Item {
+public class Test1Item extends Item implements ItemRegistered{
 
     public Test1Item(String registryName, float sweet) {
         super(new Properties().food(new Food.Builder().saturation(sweet).hunger((int) sweet).build()).group(xtxgroup.Modgroup.itemGroup));
@@ -21,5 +21,10 @@ public class Test1Item extends Item {
         super(new Properties().food(new Food.Builder().saturation(1).hunger((int) 1).build()).group(xtxgroup.Modgroup.itemGroup));
         TestItem = this;
         this.setRegistryName(Randoms.MODID, "testitem");
+    }
+
+    @Override
+    public Item getItem() {
+        return this;
     }
 }

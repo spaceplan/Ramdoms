@@ -3,7 +3,6 @@ package com.xutongxin.randoms.block;
 import com.github.dawnflyc.processtree.ITreeHandler;
 import com.github.dawnflyc.processtree.Result;
 import com.github.dawnflyc.processtree.TreeScan;
-import com.xutongxin.randoms.event.GameRegister;
 import com.xutongxin.randoms.xtxgroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
