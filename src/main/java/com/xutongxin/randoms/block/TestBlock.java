@@ -1,6 +1,6 @@
-package com.xutongxin.randoms;
+package com.xutongxin.randoms.block;
 
-import com.xutongxin.randoms.block.IBlockRegistered;
+import com.xutongxin.randoms.Randoms;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
