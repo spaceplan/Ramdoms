@@ -14,7 +14,7 @@ public class TestBlock extends Block implements IBlockRegistered {
     public TestBlock() {
         super(Properties.create(Material.IRON, MaterialColor.WATER).hardnessAndResistance(2));
         testBlock = this;
-        this.setRegistryName(Randoms.MODID, "steel_furnace");
+        this.setRegistryName(Randoms.MODID, "testblock");
     }
 
 

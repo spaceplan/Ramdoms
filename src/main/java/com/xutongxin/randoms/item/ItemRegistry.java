@@ -20,7 +20,7 @@ import java.util.Set;
 @TreeScan(method = ItemRegistered.class)
 public class ItemRegistry implements ITreeHandler<ItemRegistered> {
 
-    private static final Set<Item> REG_BLOCKS = new HashSet<>();
+    private static final Set<Item> REG_BLOCKS = new HashSet<Item>();
 
     @SubscribeEvent
     public static void registerItem(RegistryEvent.Register<Item> event) {
