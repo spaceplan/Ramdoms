@@ -1,0 +1,7 @@
+{
+  "variants":
+  {
+    "count=0":{"model": "randoms:block/counter_0"},
+    "count=1":{"model": "randoms:block/counter_1"}
+  }
+}

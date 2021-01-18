@@ -1,5 +1,6 @@
 {
   "itemGroup.xtx_group": "xtx的物品栏",
   "item.randoms.testitem": "测试物品",
-  "block.randoms.testblock": "测试方块"
+  "block.randoms.testblock": "测试方块",
+  "block.randoms.counter": "计时器"
 }
