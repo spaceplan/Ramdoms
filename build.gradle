@@ -98,7 +98,7 @@ dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
+    minecraft 'net.minecraftforge:forge:1.16.4-35.1.37'
 
     compile fileTree(dir:'libs',includes:['*jar'])
 
@@ -136,7 +136,7 @@ jar {
         ])
     }
     from {
-        files("libs/ProcessTree.jar").collect{ it.isDirectory() ? it : zipTree(it) }
+        files("libs/ProcessTree_v1.1.jar").collect{ it.isDirectory() ? it : zipTree(it) }
     }
 }
 
