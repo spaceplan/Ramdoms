@@ -1,8 +1,9 @@
 package com.xutongxin.randoms.item;
 
-import com.github.dawnflyc.processtree.ITreeHandler;
+import com.github.dawnflyc.processtree.IScanResultHandler;
+
 import com.github.dawnflyc.processtree.Result;
-import com.github.dawnflyc.processtree.TreeScan;
+import com.github.dawnflyc.processtree.ScanNode;
 import com.xutongxin.randoms.block.IBlockRegistered;
 import com.xutongxin.randoms.xtxgroup;
 import net.minecraft.block.Block;
@@ -17,8 +18,8 @@ import java.util.Set;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-@TreeScan(method = ItemRegistered.class)
-public class ItemRegistry implements ITreeHandler<ItemRegistered> {
+@ScanNode(target  = ItemRegistered.class)
+public class ItemRegistry implements IScanResultHandler<ItemRegistered> {
 
     private static final Set<Item> REG_BLOCKS = new HashSet<Item>();
 
