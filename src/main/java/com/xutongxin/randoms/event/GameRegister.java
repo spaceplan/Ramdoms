@@ -78,11 +78,11 @@ public class GameRegister {
     public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
         for (Item value : REG_ITEMS.values()) {
             itemRegistryEvent.getRegistry().register(value);
-            LOGGER.info("注册物品:" + value.getRegistryName().getPath() + "成功！");
+            LOGGER.info("registeredItems:" + value.getRegistryName().getPath() + "success！");
         }
         for (Block value : REG_BLOCKS.values()) {
             itemRegistryEvent.getRegistry().register(new BlockItem(value,new Item.Properties()).setRegistryName(value.getRegistryName()));
-            LOGGER.info("注册物品:" + value.getRegistryName().getPath() + "成功！");
+            LOGGER.info("registeredItems:" + value.getRegistryName().getPath() + "success！");
         }
     }
 
@@ -90,7 +90,7 @@ public class GameRegister {
     public static void onBlocksRegistry(final RegistryEvent.Register<Block> itemRegistryEvent) {
         for (Block value : REG_BLOCKS.values()) {
             itemRegistryEvent.getRegistry().register(value);
-            LOGGER.info("注册物品:" + value.getRegistryName().getPath() + "成功！");
+            LOGGER.info("registeredItems:" + value.getRegistryName().getPath() + "success！");
         }
     }
 
